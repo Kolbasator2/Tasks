@@ -124,3 +124,42 @@
 // {
 //     Console.WriteLine("Yes");
 // }
+//
+// Task 19
+//
+// Console.Write("Input number: ");
+// string number = Console.ReadLine();
+// if(number[0] == number[4] && number[1] == number[3])
+// {
+//     Console.WriteLine("Yes");
+// }
+// else
+// {
+//     Console.WriteLine("No");
+// }
+//
+// Task 21
+//
+// Console.Write("Input Ox coordinate of A: ");
+// int OxCoordinateOfA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Oy coordinate of A: ");
+// int OyCoordinateOfA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Oz coordinate of A: ");
+// int OzCoordinateOfA = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Ox coordinate of B: ");
+// int OxCoordinateOfB = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Oy coordinate of B: ");
+// int OyCoordinateOfB = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input Oz coordinate of B: ");
+// int OzCoordinateOfB = Convert.ToInt32(Console.ReadLine());
+// double distance = Math.Sqrt(Math.Pow(OxCoordinateOfA - OxCoordinateOfB, 2) + Math.Pow(OyCoordinateOfA - OyCoordinateOfB, 2) + Math.Pow(OzCoordinateOfA - OzCoordinateOfB, 2));
+// Console.WriteLine(distance);
+//
+// Task 23
+//
+Console.Write("Input number: ");
+int number = Convert.ToInt32(Console.ReadLine());
+for(int i = 1; i <= number; i++)
+{
+    Console.Write($"{Math.Pow(i, 3)}, ");
+}
