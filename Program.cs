@@ -157,9 +157,37 @@
 //
 // Task 23
 //
-Console.Write("Input number: ");
-int number = Convert.ToInt32(Console.ReadLine());
-for(int i = 1; i <= number; i++)
-{
-    Console.Write($"{Math.Pow(i, 3)}, ");
-}
+// Console.Write("Input number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// for(int i = 1; i <= number; i++)
+// {
+//     Console.Write($"{Math.Pow(i, 3)}, ");
+// }
+//
+// Task 25
+//
+// Console.Write("Input number: ");
+// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input degree: ");
+// int degree = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(Math.Pow(number, degree));
+//
+// Task 27
+//
+// Console.Write("Input number: ");
+// string number = Console.ReadLine();
+// double sum = 0;
+// for(int i = 0; i < number.Length; i++)
+// {
+//     sum += Char.GetNumericValue(number[i]);
+// }
+// Console.WriteLine(sum);
+//
+// Task 29
+//
+// int[] numbers = new int[8];
+// for(int i = 0; i < numbers.Length; i++)
+// {
+//     numbers[i] = new Random().Next(-100, 99);
+// }
+// Console.WriteLine($"[{string.Join(", ", numbers)}]");
