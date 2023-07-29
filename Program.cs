@@ -287,3 +287,31 @@
 // double[] array = generateArray(length);
 // Console.WriteLine($"[{string.Join(", ", array)}]");
 // Console.WriteLine($"Difference between max and min elements equals to {getMaxElement(array) - getMinElement(array)}");
+//
+// Task 41
+//
+// Console.Write("Input numbers: ");
+// int[] numbers = Console.ReadLine().Split(" ").Select(x => int.Parse(x)).ToArray();
+// int amountOfPositiveNumbers = 0;
+// for(int i = 0; i < numbers.Length; i++)
+// {
+//     if(numbers[i] >= 0)
+//     {
+//         amountOfPositiveNumbers++;
+//     }
+// }
+// Console.WriteLine(amountOfPositiveNumbers);
+//
+// Task 43
+//
+// Console.Write("Input k1: ");
+// double k1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input b1: ");
+// double b1 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input k2: ");
+// double k2 = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input b2: ");
+// double b2 = Convert.ToInt32(Console.ReadLine());
+// double x = (b2 - b1) / (k1 - k2);
+// double y = k1 * x + b1;
+// Console.WriteLine($"({x}, {y})");
