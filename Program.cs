@@ -315,3 +315,129 @@
 // double x = (b2 - b1) / (k1 - k2);
 // double y = k1 * x + b1;
 // Console.WriteLine($"({x}, {y})");
+//
+// Task 47
+//
+// double[,] generateMatrixWithRealElements(int m, int n)
+// {
+//     double[,] matrix = new double[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j< n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(-10, 9) * Math.PI;
+//         }
+//     }
+//     return matrix;
+// }
+// void showMatrix(double[,] matrix, int m, int n)
+// {
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// showMatrix(generateMatrixWithRealElements(m, n), m, n);
+//
+// Task 50
+//
+// int[,] generateMatrix(int m, int n)
+// {
+//     int[,] matrix = new int[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j< n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(-0, 9);
+//         }
+//     }
+//     return matrix;
+// }
+// int checkElement(int[,] matrix, int m, int n, int i, int j)
+// {
+//     if(m <= i || n <= j)
+//     {
+//         throw new Exception("There is no element with such indexes!");
+//     } 
+//     return matrix[i, j];
+// }
+// void showMatrix(int[,] matrix, int m, int n)
+// {
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = generateMatrix(m, n);
+// showMatrix(matrix, m, n);
+// Console.Write("Input i: ");
+// int i = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input j: ");
+// int j = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(checkElement(matrix, m, n, i, j));
+//
+// Task 52
+//
+// int[,] generateMatrix(int m, int n)
+// {
+//     int[,] matrix = new int[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(0, 9);
+//         }
+//     }
+//     return matrix;
+// }
+// double[] findMeanValuesInRows(int[,] matrix, int m, int n)
+// {
+//     double[] meanValues = new double[m];
+//     for(int i = 0; i < m; i++)
+//     {
+//         double sum = 0;
+//         for(int j = 0; j < n; j++)
+//         {
+//             sum += matrix[i, j];
+//         }
+//         meanValues[i] = sum / n;
+//     }
+//     return meanValues;
+// }
+// void showMatrix(int[,] matrix, int m, int n)
+// {
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = generateMatrix(m, n);
+// showMatrix(matrix, m, n);
+// Console.WriteLine($"Mean values in rows are {string.Join(", ", findMeanValuesInRows(matrix, m, n))}");
