@@ -441,3 +441,263 @@
 // int[,] matrix = generateMatrix(m, n);
 // showMatrix(matrix, m, n);
 // Console.WriteLine($"Mean values in rows are {string.Join(", ", findMeanValuesInRows(matrix, m, n))}");
+//
+// Task 54
+//
+// int[,] generateMatrix(int m, int n)
+// {
+//     int[,] matrix = new int[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(0, 9);
+//         }
+//     }
+//     return matrix;
+// }
+// void sortRowsOfMatrix(int[,] matrix, int m, int n)
+// {
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n - 1; j++)
+//         {
+//             if(matrix[i, j] > matrix[i, j + 1])
+//             {
+//                 swapNeighborsInRow(matrix, m, n, i, j);
+//             }
+//         }
+//     }
+// }
+// void swapNeighborsInRow(int[,] matrix, int m, int n, int i, int j)
+// {
+//     int temp = matrix[i, j];
+//     matrix[i, j] = matrix[i, j + 1];
+//     matrix[i, j + 1] = temp;
+// }
+// void showMatrix(int[,] matrix, int m, int n)
+// {
+//     Console.WriteLine("\n\n");
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = generateMatrix(m, n);
+// showMatrix(matrix, m, n);
+// sortRowsOfMatrix(matrix, m, n);
+// showMatrix(matrix, m, n);
+//
+// Task 56
+//
+// int[,] generateMatrix(int m, int n)
+// {
+//     int[,] matrix = new int[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(0, 9);
+//         }
+//     }
+//     return matrix;
+// }
+// int findIndexOfRowWithMinSumOfElements(int[,] matrix, int m, int n)
+// {
+//     int[] sumsOfElementsInRows = new int[n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             sumsOfElementsInRows[i] += matrix[i, j];
+//         }
+//     }
+//     return findIndexOfMinElementInArray(sumsOfElementsInRows);
+// }
+// int findIndexOfMinElementInArray(int[] array)
+// {
+//     int indexOfMinElement = 0;
+//     for(int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] < array[indexOfMinElement])
+//         {
+//             indexOfMinElement = i;
+//         }
+//     }
+//     return indexOfMinElement;
+// }
+// void showMatrix(int[,] matrix, int m, int n)
+// {
+//     Console.WriteLine("\n\n");
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] matrix = generateMatrix(m, n);
+// showMatrix(matrix, m, n);
+// Console.WriteLine($"The index of row with min sum of elements is {findIndexOfRowWithMinSumOfElements(matrix, m, n)}");
+//
+// Task 58
+//
+// int[,] generateMatrix(int m, int n)
+// {
+//     int[,] matrix = new int[m, n];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             matrix[i, j] = new Random().Next(0, 9);
+//         }
+//     }
+//     return matrix;
+// }
+// int[,] findProductOfMatrices(int[,] firstMatrix, int[,] secondMatrix, int firstM, int firstN, int secondM, int secondN)
+// {
+//     if(firstN != secondM)
+//     {
+//         throw new Exception("Exception: cannot find product of matrices!");
+//         return null;
+//     }
+//     else
+//     {
+//         int[,] product = new int[firstM, secondN];
+//         for(int i = 0; i < firstM; i++)
+//         {
+//             for(int j = 0; j < secondN; j++)
+//             {
+//                 int sum = 0;
+//                 for(int r = 0; r < firstN; r++)
+//                 {
+//                     sum += firstMatrix[i, r] * secondMatrix[r, j];
+//                 }
+//                 product[i, j] = sum;
+//             }
+//         }
+//         return product;
+//     }
+
+// }
+// void showMatrix(int[,] matrix, int m, int n)
+// {
+//     Console.WriteLine("\n\n");
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             Console.Write(matrix[i, j] + "\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n");
+// }
+// Console.Write("Input first m: ");
+// int firstM = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input first n: ");
+// int firstN = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input second m: ");
+// int secondM = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input second n: ");
+// int secondN = Convert.ToInt32(Console.ReadLine());
+// int[,] firstMatrix = generateMatrix(firstM, firstN);
+// int[,] secondMatrix = generateMatrix(secondM, secondN);
+// showMatrix(firstMatrix, firstM, firstN);
+// showMatrix(secondMatrix, secondM, secondN);
+// showMatrix(findProductOfMatrices(firstMatrix, secondMatrix, firstM, firstN, secondM, secondN), firstM, secondN);
+//
+// Task 60
+//
+// int[,,] generateArray(int m, int n, int o)
+// {
+//     int[,,] result = new int[m, n, o];
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             for(int k = 0; k < o; k++)
+//             {
+//                 result[i, j, k] = new Random().Next(10, 40);
+//             }
+//         }
+//     }
+//     return result;
+// }
+// void showArray(int[,,] array, int m, int n, int o)
+// {
+//     Console.WriteLine("\n\n");
+//     for(int i = 0; i < m; i++)
+//     {
+//         for(int j = 0; j < n; j++)
+//         {
+//             for(int k = 0; k < o; k++)
+//             {
+//                 Console.Write($"{array[i, j, k]}({i}, {j}, {k}), ");
+//             }
+//             Console.WriteLine("\n");
+//         }
+//     }
+//     Console.WriteLine("\n\n");
+// }
+// Console.Write("Input m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Input o: ");
+// int o = Convert.ToInt32(Console.ReadLine());
+// showArray(generateArray(m, n, o), m, n, o);
+//
+// Task 62
+//
+// int[,] generateMatrix()
+// {
+//     int[,] matrix = new int[4, 4];
+//     matrix[0, 0] = 1;
+//     matrix[0, 1] = 2;
+//     matrix[0, 2] = 3;
+//     matrix[0, 3] = 4;
+//     matrix[1, 3] = 5;
+//     matrix[2, 3] = 6;
+//     matrix[3, 3] = 7;
+//     matrix[3, 2] = 8;
+//     matrix[3, 1] = 9;
+//     matrix[3, 0] = 10;
+//     matrix[2, 0] = 11;
+//     matrix[1, 0] = 12;
+//     matrix[1, 1] = 13;
+//     matrix[1, 2] = 14;
+//     matrix[2, 2] = 15;
+//     matrix[2, 1] = 16;
+//     return matrix;
+// }
+// void showMatrix(int[,] matrix)
+// {
+//     Console.WriteLine("\n\n");
+//     for(int i = 0; i < 4; i++)
+//     {
+//         for(int j = 0; j < 4; j++)
+//         {
+//             Console.Write($"{matrix[i, j]}\t");
+//         }
+//         Console.WriteLine("\n");
+//     }
+//     Console.WriteLine("\n\n");
+// }
+// showMatrix(generateMatrix());
